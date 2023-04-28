@@ -141,10 +141,10 @@ class SignalsManager(Thread):
                             continue
 
                         if (
-                            "threatintel" in _doc["_source"]
-                            and "opencti" in _doc["_source"]["threatintel"]
+                            "threat" in _doc["_source"]
+                            and "opencti" in _doc["_source"]["threat"]
                         ):
-                            _opencti_id = _doc["_source"]["threatintel"]["opencti"][
+                            _opencti_id = _doc["_source"]["threat"]["opencti"][
                                 "internal_id"
                             ]
                         else:
